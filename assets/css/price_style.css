@@ -1,0 +1,234 @@
+/* ========================  Website Theme ======================= */
+
+:root {
+    --hue-1: 257;
+    --hue-2: 47;
+    --main-color-1: hsl(var(--hue-1), 100%, 60%);
+    --main-color-dark-1: hsl(var(--hue-1), 69%, 50%);
+    --main-color-2: hsl(var(--hue-2), 100%, 61%);
+    --main-color-dark-2: hsl(var(--hue-2), 82%, 55%);
+
+    /* Padding */
+    --section-padding: 7rem;
+}
+
+body {
+    --bg-color: hsl(var(--hue-1), 100%, 97%);
+    --bg-color-1: hsl(var(--hue-1), 100%, 95.5%);
+    --bg-color-2: hsl(0, 0%, 100%);
+    --bg-color-3: hsl(var(--hue-1), 100%, 98%);
+    --bg-color-transparent: hsla(0, 0%, 100%, 0.6);
+    --heading-color-transparent: hsla(var(--hue-1), 61%, 24%, 0.3);
+    --heading-color: hsl(var(--hue-1), 61%, 24%);
+    --text-color: hsl(var(--hue-1), 40%, 15%);
+}
+
+body.dark {
+    --bg-color: hsl(var(--hue-1), 19%, 15%);
+    --bg-color-1: hsl(var(--hue-1), 21%, 11%);
+    --bg-color-2: hsl(var(--hue-1), 23%, 19%);
+    --bg-color-3: hsl(var(--hue-1), 23%, 24%);
+    --bg-color-transparent: hsla(var(--hue-1), 23%, 19%, 0.6);
+    --heading-color-transparent: hsla(var(--hue-1), 100%, 95%, 0.3);
+    --heading-color: hsl(var(--hue-1), 100%, 95%);
+    --text-color: hsl(var(--hue-1), 10%, 70%);
+}
+
+body.dark .st1 {
+    fill: hsl(var(--hue-1), 18%, 29%);
+}
+
+body.dark .shape.square {
+    opacity: 0.07;
+}
+
+body.dark .toggle-btn {
+    background-color: var(--bg-color-3);
+}
+
+body.dark .toggle-btn:hover {
+    background-color: brightness(110%);
+}
+
+body.dark .nav-link:hover::after, 
+body.dark .nav-link.active::after {
+    opacity: 0.6;
+}
+
+body.dark .form-input:hover {
+    fill: brightness(110%);
+}
+
+/* Price List Style */
+
+.sectionHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price_box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7rem;
+    flex-wrap: wrap;
+}
+
+.priceCaed {
+    width: 19.5vw;
+    height: 55vh;
+    /* padding: 1rem 5.5rem; */
+    background-color: var(--bg-color-2);
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+    transition: all 0.22s linear;
+}
+
+.priceCaed:hover,
+.premuim  {
+    margin-bottom: 25px;
+    height: 55.5vh;
+}
+
+.premuim {
+    transition: all 0.22s linear;
+}
+
+.premuim:hover {
+    margin-bottom: 0;
+}
+
+.pCardheader {
+    font-size: 1.5rem;
+    color: hsl(var(--hue-1), 100%, 95%);
+    padding: 1rem 2rem;
+    border-radius: 20px 20px 0 0;
+    background-color: var(--main-color-1);
+}
+
+.pricelist li {
+    position: relative;
+}
+
+.pricelist li {
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.pricelist li::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    top: 120%;
+    background-color: var(--bg-color-3);
+}
+
+.text2 {
+    margin-top: -45px;
+    color: var(--main-color-1);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.text2 span {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.pricetag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--heading-color);
+    margin-top: 60px;
+}
+
+.pricetag h2 {
+    font-size: 2.5rem;
+}
+
+.pricetag h2 span {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.other {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: -40px;
+}
+
+ul.pricelist li {
+    line-height: normal;
+}
+
+.premuim .pCardheader {
+    color: hsl(var(--hue-1), 61%, 24%);
+    background-color: var(--main-color-2);
+}
+
+/* ======================== Responsive => Screen 1024px ======================= */
+
+@media (max-width: 1024px) {
+    .priceCaed {
+        width: 30vw;
+        height: 40vh;
+    }
+    .priceCaed:hover, .premuim {
+        height: 40vh;
+    }
+}
+
+/* ======================== Responsive => Screen 768px ======================= */
+
+@media (max-width: 768px) {
+    .sectionHeader {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    .price_box {
+        flex-direction: column;
+        margin-top: 4rem;
+        gap: 30px;
+    }
+    .priceCaed {
+        width: 80vw;
+        height: 50vh;
+    }
+    .pricelist li {
+        gap: 20px;
+    }
+    .pricelist li::after {
+        top: 110%;
+    }
+    .other {
+        margin-top: -30px;
+    }
+    .premuim {
+        margin-bottom: 0;
+    }
+    .pricetag {
+        margin-top: 35px;
+    }
+    .priceCaed:hover,
+    .premuim {
+        margin-bottom: 0;
+        height: 50vh;
+    }
+}
